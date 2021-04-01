@@ -1,0 +1,20 @@
+{
+    "Contract1":{
+        "name":"",
+        "address": "",
+        "deployed": false,
+        "verified": false
+    },
+    "Contract2": {
+        "name":"",
+        "address": "",
+        "deployed": false,
+        "verified": false
+    },
+    "Contract3": {
+        "name":"",
+        "address": "",
+        "deployed": false,
+        "verified": false
+    }
+}
