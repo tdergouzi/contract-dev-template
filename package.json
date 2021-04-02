@@ -8,7 +8,7 @@
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
     "deploy": "node scripts/example/deploy.js ropsten",
-    "verify": "ts-node scripts/example/verify.ts"
+    "verify": "node scripts/example/verify.js ropsten"
   },
   "keywords": [],
   "author": "",
