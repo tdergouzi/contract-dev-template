@@ -1,0 +1,17 @@
+{
+    "Counter": {
+        "address": "0xB1cE97a37a8645C4e3f360DEd181F87Cb597c8ed",
+        "deployed": true,
+        "verified": false
+    },
+    "ContractA": {
+        "address": "ContractAAddress",
+        "deployed": true,
+        "verified": false
+    },
+    "ContractB": {
+        "address": "contractBAddress",
+        "deployed": true,
+        "verified": false
+    }
+}

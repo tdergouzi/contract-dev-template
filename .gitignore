@@ -1,4 +1,4 @@
 node_modules
 artifacts/*
 cache/*
-*.config.json
+config.ts
