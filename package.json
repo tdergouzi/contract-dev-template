@@ -7,8 +7,10 @@
     "build": "npm run compile",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "deploy": "node scripts/example/deploy.js ropsten",
-    "verify": "node scripts/example/verify.js ropsten"
+    "deploy-example": "node scripts/example/deploy.js ropsten",
+    "verify-example": "node scripts/example/verify.js ropsten",
+    "deploy-solo": "node scripts/example/deploy.js bsctestnet",
+    "verify-solo": "node scripts/example/verify.js bsctestnet"
   },
   "keywords": [],
   "author": "",
