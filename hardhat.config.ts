@@ -11,7 +11,7 @@
  const config: HardhatUserConfig = {
    defaultNetwork: "hardhat",
    solidity: {
-     compilers:[{version: "0.5.12", settings: {}}],
+     compilers:[{version: "0.5.12"}, {version: "0.6.6"}],
      settings: {
        optimizer: {
          enabled: true,
@@ -23,15 +23,23 @@
      hardhat: {},
      ropsten: {
        url: `https://ropsten.infura.io/v3/${myConfig.InfuraApiKey}`,
-       accounts: [myConfig.PrivateKey]
+       accounts: [myConfig.RopstenPK]
      },
+     bsctestnet: {
+       url: `https://data-seed-prebsc-1-s1.binance.org:8545/`,
+       accounts: [myConfig.BscTestNetPK]
+     },
+     bscmainnet: {
+       url: `https://bsc-dataseed.binance.org/`,
+       accounts: [myConfig.BscMainNetPK]
+     }
    },
    etherscan: {
-     apiKey: myConfig.EtherscanApiKey,
+     apiKey: myConfig.BscscanApiKey, // please use network api key
    },
    paths: {
-     sources: "./contracts/example",
-     tests: "./test/example",
+     sources: "./contracts/example", // please use your project path
+     tests: "./test/example", // please use your project path 
      cache: "./cache",
      artifacts: "./artifacts"
    },

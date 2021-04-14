@@ -1,17 +1,1 @@
-{
-    "Counter": {
-        "address": "0xB1cE97a37a8645C4e3f360DEd181F87Cb597c8ed",
-        "deployed": true,
-        "verified": false
-    },
-    "ContractA": {
-        "address": "ContractAAddress",
-        "deployed": true,
-        "verified": false
-    },
-    "ContractB": {
-        "address": "contractBAddress",
-        "deployed": true,
-        "verified": false
-    }
-}
+{"Counter":{"address":"0xFf8875efe0cf7A31F1be2562F94C408bbA3025d6","constructorArgs":[0,"0x990Da169916448cd2753D7cA51A0458572275A42"],"deployed":true,"verified":true}}

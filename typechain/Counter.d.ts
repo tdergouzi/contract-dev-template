@@ -24,15 +24,18 @@ interface CounterInterface extends ethers.utils.Interface {
     "countDown()": FunctionFragment;
     "countUp()": FunctionFragment;
     "getCount()": FunctionFragment;
+    "owner()": FunctionFragment;
   };
 
   encodeFunctionData(functionFragment: "countDown", values?: undefined): string;
   encodeFunctionData(functionFragment: "countUp", values?: undefined): string;
   encodeFunctionData(functionFragment: "getCount", values?: undefined): string;
+  encodeFunctionData(functionFragment: "owner", values?: undefined): string;
 
   decodeFunctionResult(functionFragment: "countDown", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "countUp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "getCount", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
 
   events: {
     "CountedTo(uint256)": EventFragment;
@@ -104,6 +107,10 @@ export class Counter extends Contract {
     getCount(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     "getCount()"(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    owner(overrides?: CallOverrides): Promise<[string]>;
+
+    "owner()"(overrides?: CallOverrides): Promise<[string]>;
   };
 
   countDown(
@@ -126,6 +133,10 @@ export class Counter extends Contract {
 
   "getCount()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+  owner(overrides?: CallOverrides): Promise<string>;
+
+  "owner()"(overrides?: CallOverrides): Promise<string>;
+
   callStatic: {
     countDown(overrides?: CallOverrides): Promise<void>;
 
@@ -138,6 +149,10 @@ export class Counter extends Contract {
     getCount(overrides?: CallOverrides): Promise<BigNumber>;
 
     "getCount()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    owner(overrides?: CallOverrides): Promise<string>;
+
+    "owner()"(overrides?: CallOverrides): Promise<string>;
   };
 
   filters: {
@@ -166,6 +181,10 @@ export class Counter extends Contract {
     getCount(overrides?: CallOverrides): Promise<BigNumber>;
 
     "getCount()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    owner(overrides?: CallOverrides): Promise<BigNumber>;
+
+    "owner()"(overrides?: CallOverrides): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -188,5 +207,9 @@ export class Counter extends Contract {
     getCount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     "getCount()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    "owner()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
   };
 }

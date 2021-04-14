@@ -5,19 +5,10 @@ import path from "path";
 let data = {
   Counter: {
     address: "",
+    constructorArgs: [0, "0x990Da169916448cd2753D7cA51A0458572275A42"],
     deployed: false,
     verified: false
-  },
-  ContractA: {
-    address: "",
-    deployed: false,
-    verified: false
-  },
-  ContractB: {
-    address: "",
-    deployed: false,
-    verified: false
-  },
+  }
 };
 
 async function before() {
@@ -31,24 +22,12 @@ async function deploy() {
   let contractName = "Counter"
   const factory = await ethers.getContractFactory(contractName);
   // If we had constructor arguments, they would be passed into deploy()
-  let counter = await factory.deploy();
+  let counter = await factory.deploy(data.Counter.constructorArgs[0], data.Counter.constructorArgs[1]);
   // The contract is NOT deployed yet; we must wait until it is mined
   await counter.deployed();
   // The address the Contract WILL have once mined
   data.Counter.address = counter.address;
   data.Counter.deployed = true;
-  console.log(`Deploy contract ${contractName} successful!`)
-
-  // contract A deploy
-  contractName = "ContractA"
-  data.ContractA.address = "ContractAAddress";
-  data.ContractA.deployed = true
-  console.log(`Deploy contract ${contractName} successful!`)
-
-  // contract B deploy
-  contractName = "ContractB"
-  data.ContractB.address = "contractBAddress";
-  data.ContractB.deployed = true;
   console.log(`Deploy contract ${contractName} successful!`)
 
   // write to file

@@ -6,8 +6,14 @@ contract Counter {
     using SafeMath for uint256;
 
     uint256 count = 0;
+    address public owner;
 
     event CountedTo(uint256 number);
+    
+    constructor(uint256 _count, address _owner) public {
+        count = _count;
+        owner = _owner;
+    }
 
     function countUp() public {
         count = count.add(1);

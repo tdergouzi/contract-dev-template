@@ -1,8 +1,11 @@
   // hardhat config 
   const config = {
-    PrivateKey: "",
+    RopstenPK: "",
+    BscTestNetPK: "",
+    BscMainNetPK: "",
     InfuraApiKey: "",
-    EtherscanApiKey: ""
+    EtherscanApiKey: "",
+    BscscanApiKey: ""
  };
 
  export default config;
