@@ -5,20 +5,23 @@ import path from "path";
 let data = {
   XBurger: {
     address: "",
+    constructorArgs: [],
     deployed: false,
     verified: false
   },
   DemaxShackChef: {
     address: "",
+    constructorArgs: [
+      "0x0000000000000000000000000000000000000000",
+      "",
+      "0x4645a1Cfcd402f6EAEb3aa51D252A2734d1C4c9B",
+      "1000000000000000000",
+      7940456
+    ],
     deployed: false,
     verified: false
   }
 };
-
-let ShackAddress = "0x0000000000000000000000000000000000000000"
-let DevAddress = "0x4645a1Cfcd402f6EAEb3aa51D252A2734d1C4c9B"
-let MintPerBlock = 1000000000000000000
-let StartBlock = 7940456
 
 async function before() {
   // deploy test contracts
@@ -35,20 +38,21 @@ async function deploy() {
   data.XBurger.address = xburger.address;
   data.XBurger.deployed = true;
   console.log(`Deploy contract ${contractName} successful!`)
+  data.DemaxShackChef.constructorArgs[1] = xburger.address
 
   // contract A deploy
   contractName = "DemaxShackChef"
   const demaxShackChefFactory = await ethers.getContractFactory(contractName);
   let demaxShackChef = await demaxShackChefFactory.deploy(
-    ShackAddress,
-    xburger.address,
-    DevAddress,
-    MintPerBlock,
-    StartBlock
+    data.DemaxShackChef.constructorArgs[0],
+    data.DemaxShackChef.constructorArgs[1],
+    data.DemaxShackChef.constructorArgs[2],
+    data.DemaxShackChef.constructorArgs[3],
+    data.DemaxShackChef.constructorArgs[4]
   ); // deploy args
   await demaxShackChef.deployed();
-  data.XBurger.address = demaxShackChef.address;
-  data.XBurger.deployed = true;
+  data.DemaxShackChef.address = demaxShackChef.address;
+  data.DemaxShackChef.deployed = true;
   console.log(`Deploy contract ${contractName} successful!`)
 
   // write to file

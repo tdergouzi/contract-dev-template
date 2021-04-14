@@ -11,7 +11,7 @@
  const config: HardhatUserConfig = {
    defaultNetwork: "hardhat",
    solidity: {
-     compilers:[{version: "0.6.6", settings: {}}],
+     compilers:[{version: "0.5.12"}, {version: "0.6.6"}],
      settings: {
        optimizer: {
          enabled: true,
@@ -35,11 +35,11 @@
      }
    },
    etherscan: {
-     apiKey: myConfig.EtherscanApiKey,
+     apiKey: myConfig.BscscanApiKey, // please use network api key
    },
    paths: {
-     sources: "./contracts/solo",
-     tests: "./test/solo",
+     sources: "./contracts/example", // please use your project path
+     tests: "./test/example", // please use your project path 
      cache: "./cache",
      artifacts: "./artifacts"
    },

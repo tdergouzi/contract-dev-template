@@ -7,10 +7,10 @@
     "build": "npm run compile",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "deploy-example": "node scripts/example/deploy.js ropsten",
-    "verify-example": "node scripts/example/verify.js ropsten",
-    "deploy-solo": "node scripts/example/deploy.js bsctestnet",
-    "verify-solo": "node scripts/example/verify.js bsctestnet"
+    "deploy": "npx hardhat run --network ropsten scripts/example/deploy.ts",
+    "verify": "npx hardhat run --network ropsten scripts/example/verify.ts",
+    "deploy-solo": "npx hardhat run --network bsctestnet scripts/solo/deploy.ts",
+    "verify-solo": "npx hardhat run --network bsctestnet scripts/solo/verify.ts"
   },
   "keywords": [],
   "author": "",

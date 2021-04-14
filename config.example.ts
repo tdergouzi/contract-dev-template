@@ -4,7 +4,8 @@
     BscTestNetPK: "",
     BscMainNetPK: "",
     InfuraApiKey: "",
-    EtherscanApiKey: ""
+    EtherscanApiKey: "",
+    BscscanApiKey: ""
  };
 
  export default config;
