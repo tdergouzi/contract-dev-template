@@ -1,0 +1,13 @@
+[
+    {
+        "call": true,
+        "called": false,
+        "name": "GameToken",
+        "functionName": "setupConfig",
+        "contractName": "GameToken",
+        "contractAddr": "",
+        "args": [
+            "${GameConfig.address}"
+        ]
+    } 
+]

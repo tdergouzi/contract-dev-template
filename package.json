@@ -1,32 +1,42 @@
 {
-  "name": "hardhat-test",
+  "name": "contract-dev",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run compile",
+    "wflatten": "waffle flatten .waffle.json",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "deploy": "npx hardhat run --network ropsten scripts/example/deploy.ts",
-    "verify": "npx hardhat run --network ropsten scripts/example/verify.ts",
-    "deploy-solo": "npx hardhat run --network bsctestnet scripts/solo/deploy.ts",
-    "verify-solo": "npx hardhat run --network bsctestnet scripts/solo/verify.ts"
+    "clean": "npx hardhat clean",
+    "proxy:bsctestnet": "npx hardhat run --network bsctestnet scripts/proxy.ts",
+    "deploy:bsctestnet": "npx hardhat run --network bsctestnet scripts/deploy.ts",
+    "verify:bsctestnet": "npx hardhat run --network bsctestnet scripts/verify.ts",
+    "setup:bsctestnet": "npx hardhat run --network bsctestnet scripts/setup.ts",
+    "proxy:bscmainnet": "npx hardhat run --network bscmainnet scripts/proxy.ts",
+    "deploy:bscmainnet": "npx hardhat run --network bscmainnet scripts/deploy.ts",
+    "verify:bscmainnet": "npx hardhat run --network bscmainnet scripts/verify.ts",
+    "setup:bscmainnet": "npx hardhat run --network bscmainnet scripts/setup.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "contract",
+    "hardhat",
+    "develop"
+  ],
+  "author": "Ted",
+  "license": "MIT",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/hardhat-upgrades": "^1.12.0",
     "@typechain/ethers-v5": "^6.0.5",
-    "@types/mocha": "^8.2.2",
+    "@types/mocha": "^8.2.3",
     "@types/node": "^14.14.37",
     "chai": "^4.3.4",
-    "ethereum-waffle": "^3.3.0",
-    "ethers": "^5.1.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
     "fs": "0.0.1-security",
-    "hardhat": "^2.1.2",
+    "hardhat": "^2.6.8",
     "hardhat-typechain": "^0.3.5",
     "shelljs": "^0.8.4",
     "ts-generator": "^0.1.1",
@@ -35,6 +45,8 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "path": "^0.12.7"
+    "mocha-chai-jest-snapshot": "^1.1.3",
+    "path": "^0.12.7",
+    "sleep-ts": "^0.1.1"
   }
 }
