@@ -1,5 +1,10 @@
 node_modules
-artifacts/*
-cache/*
+artifacts
+cache
 config.ts
-typechain/*
+.hardhat.*
+.data.json
+.setup.json
+typechain
+build
+flatten
