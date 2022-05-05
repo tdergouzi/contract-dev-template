@@ -74,6 +74,7 @@ async function updateArgsFromData() {
 
 async function call() {
   for (let k in data) {
+    console.log('=========contract: ', data[k].contractAddr)
     if (data[k].call && !data[k].called && data[k].contractAddr != "" && data[k].name != "") {
       console.log(` =============== Call ${data[k].name}.${data[k].functionName} ...`)
       await sleep(100)

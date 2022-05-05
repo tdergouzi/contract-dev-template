@@ -43,7 +43,9 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
-    hardhat: {},
+    hardhat: {
+      gas: "auto"
+    },
     ropsten: {
       url: `https://ropsten.infura.io/v3/${data.InfuraApiKey}`,
       accounts: [data.PrivateKey]

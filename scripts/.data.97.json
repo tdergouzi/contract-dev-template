@@ -1,0 +1,12 @@
+{
+  "Example": {
+    "contractName": "Example",
+    "address": "0x5dc18b61c560f0464bf266EBe2B5eFd81029FC83",
+    "constructorArgs": [],
+    "upgradeArgs": [],
+    "upgradedAddress": "",
+    "deployed": true,
+    "upgraded": true,
+    "verified": false
+  }
+}

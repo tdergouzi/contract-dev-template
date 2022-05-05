@@ -2,12 +2,12 @@
     {
         "call": true,
         "called": false,
-        "name": "GameToken",
-        "functionName": "setupConfig",
-        "contractName": "GameToken",
+        "name": "Example",
+        "functionName": "setOwner",
+        "contractName": "Example",
         "contractAddr": "",
         "args": [
-            "${GameConfig.address}"
+            "${Example.address}"
         ]
-    } 
+    }
 ]

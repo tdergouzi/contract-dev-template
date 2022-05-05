@@ -1,20 +1,12 @@
 {
-	"devWallet": {
-		"address": "",
-		"constructorArgs": [],
-		"upgradeArgs": [],
-		"upgradedAddress": "",
-		"deployed": true,
-		"upgraded": true,
-		"verified": true
-	},
-    "TestToken": {
-		"address": "",
-		"constructorArgs": [],
-		"upgradeArgs": [],
-		"upgradedAddress": "",
-		"deployed": false,
-		"upgraded": false,
-		"verified": false
-	}
+  "Example": {
+    "contractName": "",
+    "address": "",
+    "constructorArgs": [],
+    "upgradeArgs": [],
+    "upgradedAddress": "",
+    "deployed": false,
+    "upgraded": false,
+    "verified": false
+  }
 }
