@@ -20,9 +20,9 @@ Fill with your own conf.
 ```
 If there is a new account, you need get some gas token from facut.
 
-[Ethereum facut](https://testnet.binance.org/faucet-smart)
+[Ethereum Rinkeby Faucet](https://rinkebyfaucet.com/)
 
-[Bsc facut](https://testnet.binance.org/faucet-smart)
+[BSC Test Faucet](https://testnet.binance.org/faucet-smart)
 
 
 ### Cmd
