@@ -1,5 +1,3 @@
-## Smart Contract Dev
-
 ### Install
 ```sh
 yarn
