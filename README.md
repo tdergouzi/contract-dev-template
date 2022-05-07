@@ -3,12 +3,13 @@
 yarn
 ```
 
+
 ### Conf
-Copy hardhat config
+Copy hardhat config.
 ```sh
 cp hardhat.data.example.json .hardhat.data.json
 ```
-Fill with your own conf
+Fill with your own conf.
 ```json
 {
   "PrivateKey": "", // Creater a account by Chrome Metamask wallet.
@@ -19,9 +20,10 @@ Fill with your own conf
 ```
 If there is a new account, you need get some gas token from facut.
 
-Ethereum facut: https://testnet.binance.org/faucet-smart
+[Ethereum facut](https://testnet.binance.org/faucet-smart)
 
-Bsc facut: https://testnet.binance.org/faucet-smart
+[Bsc facut](https://testnet.binance.org/faucet-smart)
+
 
 ### Cmd
 ```sh
