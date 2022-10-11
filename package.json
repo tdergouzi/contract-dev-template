@@ -13,11 +13,9 @@
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
     "clean": "npx hardhat clean",
-    "proxy:bsctestnet": "npx hardhat run --network bsctestnet scripts/proxy.ts",
     "deploy:bsctestnet": "npx hardhat run --network bsctestnet scripts/deploy.ts",
     "verify:bsctestnet": "npx hardhat run --network bsctestnet scripts/verify.ts",
     "setup:bsctestnet": "npx hardhat run --network bsctestnet scripts/setup.ts",
-    "proxy:bscmainnet": "npx hardhat run --network bscmainnet scripts/proxy.ts",
     "deploy:bscmainnet": "npx hardhat run --network bscmainnet scripts/deploy.ts",
     "verify:bscmainnet": "npx hardhat run --network bscmainnet scripts/verify.ts",
     "setup:bscmainnet": "npx hardhat run --network bscmainnet scripts/setup.ts"
