@@ -32,7 +32,7 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: "0.6.12",
+        version: "0.8.7",
         settings: {
           optimizer: {
             enabled: true,
@@ -56,10 +56,6 @@ const config: HardhatUserConfig = {
     },
     bscmainnet: {
       url: `https://bsc-dataseed.binance.org/`,
-      accounts: [data.PrivateKey]
-    },
-    hecotestnet: {
-      url: `https://http-testnet.hecochain.com`,
       accounts: [data.PrivateKey]
     }
   },
