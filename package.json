@@ -1,15 +1,14 @@
 {
-  "name": "smart-contract-hardhat-framework",
+  "name": "contract-dev-framework",
   "description": "Smart contract dev framework based on hardhat",
   "author": "Ted",
   "keywords": [
-    "smart contract",
-    "hardhat",
-    "develop"
+    "solidity",
+    "hardhat"
   ],
   "license": "MIT",
   "scripts": {
-    "wflatten": "waffle flatten .waffle.json",
+    "flatten": "waffle flatten ",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
     "clean": "npx hardhat clean",
@@ -23,25 +22,22 @@
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-etherscan": "^2.1.7",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-solhint": "^3.0.0",
     "@openzeppelin/contracts": "4.2.0",
     "@openzeppelin/hardhat-upgrades": "^1.12.0",
     "@typechain/ethers-v5": "^6.0.5",
     "@types/mocha": "^8.2.3",
-    "@types/node": "^14.14.37",
     "chai": "^4.3.4",
+    "dotenv": "^16.0.3",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.1",
-    "fs": "0.0.1-security",
     "hardhat": "^2.6.8",
     "hardhat-typechain": "^0.3.5",
-    "shelljs": "^0.8.4",
+    "mocha-chai-jest-snapshot": "^1.1.3",
+    "sleep-ts": "^0.1.1",
     "ts-generator": "^0.1.1",
     "ts-node": "^9.1.1",
     "typechain": "^4.0.3",
-    "typescript": "^4.2.3",
-    "mocha-chai-jest-snapshot": "^1.1.3",
-    "path": "^0.12.7",
-    "sleep-ts": "^0.1.1"
+    "typescript": "^4.2.3"
   }
 }

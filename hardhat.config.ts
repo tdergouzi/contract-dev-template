@@ -1,38 +1,18 @@
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
 import { HardhatUserConfig } from "hardhat/types";
 import '@openzeppelin/hardhat-upgrades';
-
-import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-etherscan";
+import "@nomiclabs/hardhat-solhint";
 import "hardhat-typechain";
-import fs from "fs";
-import path from "path";
-const USER_HOME = process.env.HOME || process.env.USERPROFILE
-let data = {
-  "PrivateKey": "",
-  "InfuraApiKey": "",
-  "EtherscanApiKey": "",
-};
+import * as dotenv from "dotenv"
 
-let filePath = path.join(USER_HOME+'/.hardhat.data.json');
-if (fs.existsSync(filePath)) {
-  let rawdata = fs.readFileSync(filePath);
-  data = JSON.parse(rawdata.toString());
-}
-filePath = path.join(__dirname, `.hardhat.data.json`);
-if (fs.existsSync(filePath)) {
-  let rawdata = fs.readFileSync(filePath);
-  data = JSON.parse(rawdata.toString());
-}
+dotenv.config()
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   solidity: {
     compilers: [
       {
-        version: "0.8.7",
+        version: "0.8.17",
         settings: {
           optimizer: {
             enabled: true,
@@ -46,21 +26,21 @@ const config: HardhatUserConfig = {
     hardhat: {
       gas: "auto"
     },
-    ropsten: {
-      url: `https://ropsten.infura.io/v3/${data.InfuraApiKey}`,
-      accounts: [data.PrivateKey]
+    goerli: {
+      url: `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: [String(process.env.PRIVATE_KEY)]
     },
     bsctestnet: {
       url: `https://data-seed-prebsc-1-s1.binance.org:8545/`,
-      accounts: [data.PrivateKey]
+      accounts: [String(process.env.PRIVATE_KEY)]
     },
     bscmainnet: {
       url: `https://bsc-dataseed.binance.org/`,
-      accounts: [data.PrivateKey]
+      accounts: [String(process.env.PRIVATE_KEY)]
     }
   },
   etherscan: {
-    apiKey: data.EtherscanApiKey,
+    apiKey: process.env.ETHERSCAN_API_KEY,
   },
   paths: {
     sources: "./contracts",

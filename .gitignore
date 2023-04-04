@@ -5,6 +5,7 @@ config.ts
 .hardhat.*
 .data.json
 .setup.json
+.env
 typechain
 build
 flatten
