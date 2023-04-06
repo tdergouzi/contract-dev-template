@@ -5,3 +5,7 @@ cache
 flatten
 typechain-types
 tmp.*
+
+# coverage
+coverage
+coverage.json

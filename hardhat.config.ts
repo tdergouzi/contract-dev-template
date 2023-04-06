@@ -4,7 +4,8 @@ import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import '@openzeppelin/hardhat-upgrades';
-// import "hardhat-typechain";
+import "hardhat-gas-reporter";
+import 'solidity-coverage'
 import "dotenv/config";
 // import * as dotenv from "dotenv"
 // dotenv.config()
@@ -52,6 +53,11 @@ const config: HardhatUserConfig = {
   },
   mocha: {
     timeout: 20000
+  },
+  gasReporter: {
+    enabled: (process.env.REPORT_GAS) ? true : false,
+    currency: "EUR",
+    gasPrice: 20
   }
 };
 
