@@ -18,7 +18,8 @@
     "setup:bsctestnet": "npx hardhat run --network bsctestnet scripts/setup.ts",
     "deploy:bscmainnet": "npx hardhat run --network bscmainnet scripts/deploy.ts",
     "verify:bscmainnet": "npx hardhat run --network bscmainnet scripts/verify.ts",
-    "setup:bscmainnet": "npx hardhat run --network bscmainnet scripts/setup.ts"
+    "setup:bscmainnet": "npx hardhat run --network bscmainnet scripts/setup.ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@openzeppelin/contracts": "4.2.0",
@@ -37,6 +38,7 @@
     "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "ethereum-waffle": "^3.4.0",
+    "husky": "^8.0.3",
     "sleep-ts": "^0.1.1",
     "solhint": "^3.4.1",
     "solhint-plugin-prettier": "^0.0.5",
