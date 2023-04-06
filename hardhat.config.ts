@@ -1,11 +1,13 @@
 import { HardhatUserConfig } from "hardhat/types";
-import '@openzeppelin/hardhat-upgrades';
 import "@nomiclabs/hardhat-etherscan";
-import "@nomiclabs/hardhat-solhint";
-import "hardhat-typechain";
-import * as dotenv from "dotenv"
-
-dotenv.config()
+import "@nomiclabs/hardhat-ethers";
+import "@nomiclabs/hardhat-waffle";
+import "@typechain/hardhat";
+import '@openzeppelin/hardhat-upgrades';
+// import "hardhat-typechain";
+import "dotenv/config";
+// import * as dotenv from "dotenv"
+// dotenv.config()
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",

@@ -1,7 +1,7 @@
 import { Wallet } from 'ethers'
 import { ethers, waffle } from 'hardhat'
-import { Example } from '../typechain/Example'
-import { expect } from './shared/expect'
+import { Example } from '../typechain-types/Example'
+import { expect } from 'chai'
 import { exampleFixture } from './shared/fixturesExample'
 
 const createFixtureLoader = waffle.createFixtureLoader
@@ -19,7 +19,7 @@ describe('Example', async () => {
     })
 
     beforeEach('deploy Example', async () => {
-    
+
         ; ({ e } = await loadFixTure(exampleFixture));
     })
 

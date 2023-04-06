@@ -1,6 +1,12 @@
 {
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "no-console": "error",
+    "no-empty-blocks": "warn",
+    "check-send-result": "warn",
+    "use-forbidden-name": "warn",
+    "no-complex-fallback": "warn",
+    "reentrancy": "warn",
+    "private-vars-leading-underscore": ["warn",{"strict":false}]
   }
 }

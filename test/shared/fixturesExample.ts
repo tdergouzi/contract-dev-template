@@ -1,7 +1,7 @@
 import { Wallet } from 'ethers'
 import { ethers } from 'hardhat'
 import { Fixture} from 'ethereum-waffle'
-import { Example } from '../../typechain/Example'
+import { Example } from '../../typechain-types/Example'
 
 interface ExampleFixture {
     e: Example

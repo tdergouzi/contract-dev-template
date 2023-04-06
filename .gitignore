@@ -1,11 +1,7 @@
 node_modules
+.env
 artifacts
 cache
-config.ts
-.hardhat.*
-.data.json
-.setup.json
-.env
-typechain
-build
 flatten
+typechain-types
+tmp.*
