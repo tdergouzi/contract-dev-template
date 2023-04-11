@@ -55,9 +55,7 @@ const config: HardhatUserConfig = {
     timeout: 20000
   },
   gasReporter: {
-    enabled: (process.env.REPORT_GAS) ? true : false,
-    currency: "EUR",
-    gasPrice: 20
+    enabled: true
   }
 };
 
