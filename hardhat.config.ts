@@ -7,6 +7,7 @@ import '@openzeppelin/hardhat-upgrades';
 import "hardhat-gas-reporter";
 import 'solidity-coverage'
 import "dotenv/config";
+import env from "hardhat";
 // import * as dotenv from "dotenv"
 // dotenv.config()
 
@@ -55,7 +56,7 @@ const config: HardhatUserConfig = {
     timeout: 20000
   },
   gasReporter: {
-    enabled: true
+    enabled: process.env.REPORT_GAS !== undefined
   }
 };
 
