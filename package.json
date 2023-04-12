@@ -11,7 +11,7 @@
     "flatten": "waffle flatten",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "test:gas": "REPORT_GAS=true npx hardhat test",
+    "profile": "REPORT_GAS=true npx hardhat test",
     "clean": "npx hardhat clean",
     "solhint": "npx solhint",
     "coverage": "hardhat coverage --solcoverjs ./.solcover.js",
